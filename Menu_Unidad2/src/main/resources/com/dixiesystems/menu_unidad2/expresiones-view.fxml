@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.dixiesystems.menu_unidad2.ExpresionesController"
+            prefWidth="600" prefHeight="400"
+            style="-fx-background-color: linear-gradient(to bottom, #d9f2ff, #b3e0ff);">
+
+    <!-- PARTE SUPERIOR: Título -->
+    <top>
+        <Label text="🔎 Evaluador de Expresiones Regulares"
+               BorderPane.alignment="CENTER"
+               style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #003366;
+                      -fx-padding: 15; -fx-background-color: #66ccff;"/>
+    </top>
+
+    <!-- PARTE CENTRAL: Explicación y Campo de Entrada -->
+    <center>
+        <VBox spacing="15" alignment="CENTER" style="-fx-padding: 30;">
+            <children>
+                <Label text="Ingrese su expresión usando símbolos: a,b,c,0,1 y operadores | * + ?"
+                       wrapText="true"
+                       style="-fx-font-size: 14px; -fx-text-fill: #004466; -fx-font-weight: bold;"/>
+
+                <TextField fx:id="txtExpresion" promptText="Ejemplo: (a|b)c*"
+                           style="-fx-font-size: 16px; -fx-pref-width: 300;
+                                  -fx-background-color: #ffffff; -fx-border-color: #004466;"/>
+
+                <Button text="✅ Evaluar Expresión" onAction="#evaluarExpresion"
+                        style="-fx-background-color: #00cc99; -fx-text-fill: white;
+                               -fx-font-weight: bold; -fx-pref-width: 180; -fx-padding: 8;"/>
+            </children>
+        </VBox>
+    </center>
+
+    <!-- PARTE INFERIOR: Botón Salir -->
+    <bottom>
+        <Button text="🚪 Salir"
+                onAction="#salirAplicacion"
+                BorderPane.alignment="CENTER"
+                style="-fx-background-color: #ff6666; -fx-text-fill: white;
+                       -fx-font-weight: bold; -fx-pref-width: 100; -fx-padding: 5; -fx-margin: 10;"/>
+    </bottom>
+
+</BorderPane>

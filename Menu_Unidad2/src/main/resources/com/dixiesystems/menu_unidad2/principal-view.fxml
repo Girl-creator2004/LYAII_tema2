@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="600.0" style="-fx-background-color: #C8A2C8;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dixiesystems.menu_unidad2.PrincipalController">
+    <children>
+        <Label layoutX="185.0" layoutY="14.0" style="-fx-padding: 10px; -fx-font-weight: bold; -fx-border-color: #FF00FF;" text="Menú Unidad 2">
+            <font>
+                <Font size="33.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="0.9772727850711707" endY="0.85984847852678" startX="0.9810606367660292" startY="0.45075745293588343">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.8199999928474426" blue="0.4251232445240021" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.8631578683853149" green="0.22697855532169342" blue="0.22697855532169342" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+
+        <!-- VBox para organizar los botones -->
+        <Button layoutX="51.0" layoutY="404.0" mnemonicParsing="false" onAction="#onTriplos" prefHeight="37.0" prefWidth="254.0" text="Triplos" textFill="#a60e3e">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+      <Button layoutX="318.0" layoutY="114.0" mnemonicParsing="false" onAction="#onGenerarClick" prefHeight="37.0" prefWidth="254.0" text="Cuádruplos" textFill="#a60e3e">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="318.0" layoutY="169.0" mnemonicParsing="false" onAction="#onGenCodigo" prefHeight="37.0" prefWidth="254.0" text="Generación de código" textFill="#a60e3e">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="318.0" layoutY="226.0" mnemonicParsing="false" onAction="#handleAnalyze" prefHeight="37.0" prefWidth="254.0" text="Variables y Constantes" textFill="#a60e3e">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="318.0" layoutY="284.0" mnemonicParsing="false" onAction="#onExpresiones" prefHeight="37.0" prefWidth="254.0" text="Expresiones" textFill="#a60e3e">
+         <font>
+            <Font size="16.0" />
+         </font>
+    </Button>
+      <Button layoutX="51.0" layoutY="284.0" mnemonicParsing="false" onAction="#onNotacionPolaca" prefHeight="37.0" prefWidth="254.0" text="Notación Polaca" textFill="#a60e3e">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="51.0" layoutY="226.0" mnemonicParsing="false" onAction="#onPostfija" prefHeight="37.0" prefWidth="254.0" text="Postfija" textFill="#a60e3e">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="51.0" layoutY="169.0" mnemonicParsing="false" onAction="#onInfija" prefHeight="37.0" prefWidth="254.0" text="Infija" textFill="#a60e3e">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="318.0" layoutY="341.0" mnemonicParsing="false" onAction="#onAsignacion" prefHeight="37.0" prefWidth="254.0" text="Instruccion de Asignación" textFill="#a60e3e">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="318.0" layoutY="404.0" mnemonicParsing="false" onAction="#onInsControl" prefHeight="37.0" prefWidth="254.0" text="Instrucción de Control" textFill="#a60e3e">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="51.0" layoutY="114.0" mnemonicParsing="false" onAction="#onNotacion" prefHeight="37.0" prefWidth="254.0" text="Código intermerdio" textFill="#a60e3e">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="51.0" layoutY="341.0" mnemonicParsing="false" onAction="#oncodigoP" prefHeight="37.0" prefWidth="254.0" text="Código P" textFill="#a60e3e">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

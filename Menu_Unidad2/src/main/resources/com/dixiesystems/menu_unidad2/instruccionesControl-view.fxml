@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.dixiesystems.menu_unidad2.InstruccionesControlController"
+      spacing="12" fillWidth="true">
+
+
+    <padding>
+        <Insets top="16" right="16" bottom="16" left="16"/>
+    </padding>
+
+    <Label text="Instrucciones de Control y Estructuras — Demo JavaFX" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="8" vgap="8">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="25"/>
+            <ColumnConstraints percentWidth="75"/>
+        </columnConstraints>
+
+        <Label text="Número (N):" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="inputNumero" promptText="Ej. 15" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Acciones:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <HBox spacing="8" GridPane.rowIndex="1" GridPane.columnIndex="1">
+            <Button text="Clasificar (if/switch)" onAction="#onClasificar"/>
+            <Button text="Contar ↑ (for)" onAction="#onContarAsc"/>
+            <Button text="Contar ↓ (while)" onAction="#onContarDesc"/>
+            <Button text="Múltiplos de 3 (do/while)" onAction="#onMultiplosDe3"/>
+            <Button text="Limpiar" onAction="#onLimpiar"/>
+        </HBox>
+    </GridPane>
+
+    <Label fx:id="estado" text="Listo." style="-fx-text-fill: #444;"/>
+
+    <Label text="Salida:"/>
+    <TextArea fx:id="salida" prefRowCount="14" wrapText="true" />
+
+    <TitledPane text="¿Qué demuestra esta app?" expanded="false">
+        <content>
+            <VBox spacing="6">
+                <Label text="• Estructura secuencial: validación y flujo normal del método."/>
+                <Label text="• Estructuras selectivas: if/else para signo y switch para rangos/paridad."/>
+                <Label text="• Estructuras repetitivas: for (contar asc), while (contar desc), do-while (múltiplos)."/>
+            </VBox>
+        </content>
+    </TitledPane>
+
+</VBox>
+

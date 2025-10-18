@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.dixiesystems.menu_unidad2.CuadruplosController"
+      spacing="15">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <children>
+        <Label text="Escribe una expresión (ejemplo: a = b + c * d)"/>
+        <TextField fx:id="txtExpresion" promptText="Ejemplo: a = b + c * d"/>
+        <Button text="Generar Cuádruplos" onAction="#onGenerarClick"/>
+
+        <TableView fx:id="tabla" prefHeight="300.0">
+            <columns>
+                <TableColumn fx:id="colOp"   text="Operador" />
+                <TableColumn fx:id="colArg1" text="Arg1" />
+                <TableColumn fx:id="colArg2" text="Arg2" />
+                <TableColumn fx:id="colRes"  text="Resultado" />
+            </columns>
+        </TableView>
+    </children>
+</VBox>

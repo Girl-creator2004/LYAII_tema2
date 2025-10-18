@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.dixiesystems.menu_unidad2.TriploController">
+
+    <top>
+        <Label text="Gestión de Triplos (Operador, Arg1, Arg2)"
+               style="-fx-font-size: 16px; -fx-font-weight: bold;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <TableView fx:id="tablaTriplos" prefHeight="300">
+            <columns>
+                <TableColumn fx:id="colOperador" text="Operador" prefWidth="100"/>
+                <TableColumn fx:id="colArg1" text="Arg1" prefWidth="100"/>
+                <TableColumn fx:id="colArg2" text="Arg2" prefWidth="100"/>
+                <TableColumn fx:id="colExplicacion" text="Explicación" prefWidth="250"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="center">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <TextField fx:id="txtOperador" promptText="Operador"/>
+                <TextField fx:id="txtArg1" promptText="Arg1"/>
+                <TextField fx:id="txtArg2" promptText="Arg2"/>
+                <Button text="Agregar Triplo" onAction="#agregarTriplo"/>
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>

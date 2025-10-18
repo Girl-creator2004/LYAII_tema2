@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.dixiesystems.menu_unidad2.codigoPController"
+            style="-fx-background-color: linear-gradient(to bottom right, #1e1e2f, #2a2a40);">
+
+    <top>
+        <Label text="Generador de Código P Intermedio"
+               style="-fx-font-size: 22px; -fx-text-fill: white; -fx-font-weight: bold;"
+               BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </Label>
+    </top>
+
+    <center>
+        <GridPane hgap="15" vgap="15">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50"/>
+                <ColumnConstraints percentWidth="50"/>
+            </columnConstraints>
+
+            <Label text="Código Fuente:"
+                   GridPane.rowIndex="0" GridPane.columnIndex="0"
+                   style="-fx-text-fill: #ccccff; -fx-font-size: 16;"/>
+
+            <Label text="Código Intermedio:"
+                   GridPane.rowIndex="0" GridPane.columnIndex="1"
+                   style="-fx-text-fill: #ccccff; -fx-font-size: 16;"/>
+
+            <TextArea fx:id="taCodigoFuente"
+                      GridPane.rowIndex="1" GridPane.columnIndex="0"
+                      wrapText="true"
+                      style="-fx-control-inner-background: #2d2d44; -fx-text-fill: white; -fx-border-color: #666; -fx-border-radius: 8; -fx-background-radius: 8;"
+                      prefRowCount="15"/>
+
+            <TextArea fx:id="taCodigoIntermedio"
+                      GridPane.rowIndex="1" GridPane.columnIndex="1"
+                      wrapText="true"
+                      editable="false"
+                      style="-fx-control-inner-background: #22223b; -fx-text-fill: #aaffaa; -fx-border-color: #555; -fx-border-radius: 8; -fx-background-radius: 8;"
+                      prefRowCount="15"/>
+        </GridPane>
+    </center>
+
+    <bottom>
+        <HBox spacing="15" alignment="CENTER">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Button fx:id="btnGenerar"
+                    text="Generar Código P"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 10; -fx-padding: 8 20;"/>
+            <Button fx:id="btnLimpiar"
+                    text="Limpiar"
+                    style="-fx-background-color: #e53935; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 10; -fx-padding: 8 20;"/>
+        </HBox>
+    </bottom>
+</BorderPane>
